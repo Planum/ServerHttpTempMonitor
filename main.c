@@ -1,21 +1,22 @@
 #include <stdio.h>
 
 #include "argtable3.h"
+#include "cmd.h"
 
-/* global arg_xxx structs */
-struct arg_lit *help, *version;
-struct arg_int *level;
-struct arg_end *end;
+
+
 
 int main(int argc, char *argv[])
 {
+
     /* the global arg_xxx structs are initialised within the argtable */
     void *argtable[] = {
         help    = arg_litn("h", "help", 0, 1, "display this help and exit"),
         version = arg_litn("v", "version", 0, 1, "display version info and exit"),
         level   = arg_intn("l", "level", "<n>", 0, 1, "foo value"),
-        end     = arg_end(20),
+        end     = arg_end(1),
     };
+
 
     int exitcode = 0;
     char progname[] = "ServerHttpTempMonitor";
