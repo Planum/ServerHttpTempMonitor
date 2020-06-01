@@ -5,6 +5,7 @@
 struct arg_lit *help, *version;
 struct arg_int *level, *port;
 struct arg_end *end;
+struct arg_str *host;
 
 
 

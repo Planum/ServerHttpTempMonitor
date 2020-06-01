@@ -8,5 +8,5 @@ SOURCES += \
         main.c
 
 HEADERS += \
-    argtable3.h \
-    cmd.h
+   		argtable3.h \
+        cmd.h
